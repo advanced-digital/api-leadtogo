@@ -1,5 +1,7 @@
 module.exports = {
-  HOST: "localhost",
+  HOST: "mongo_leadtogo",
   PORT: 27017,
-  DB: "leadtogo"
+  DB: "leadtogo",
+  USER:"leadtogo",
+  PWD:"leadtogo1212"
 };
