@@ -2,6 +2,7 @@ const db = require('../models');
 const Voto = db.voto;
 
 exports.createVoto = (req, res) =>{
+  console.log(req.body);
   const opcao = parseInt(req.body['chat[body]']);
   if (opcao) {
     const voto = new Voto({
