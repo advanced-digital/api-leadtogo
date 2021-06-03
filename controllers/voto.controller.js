@@ -3,7 +3,8 @@ const Voto = db.voto;
 
 exports.createVoto = (req, res) =>{
   console.log(req.body);
-  const opcao = parseInt(req.body['chat[body]']);
+  const { event, token, user, operador, contact, chat } = req.body;
+  const opcao = parseInt(chat.body);
   if (opcao) {
     const voto = new Voto({
       opcao: req.body['chat[body]']
