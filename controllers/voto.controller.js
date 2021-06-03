@@ -7,7 +7,7 @@ exports.createVoto = (req, res) =>{
   const opcao = parseInt(chat.body);
   if (opcao) {
     const voto = new Voto({
-      opcao: req.body['chat[body]']
+      opcao: opcao
     });
     voto.save((err, voto) => {
       if (err) {
