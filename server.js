@@ -22,7 +22,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 const db = require("./models");
 
 db.mongoose
-  .connect(`mongodb://${dbConfig.HOST}:${dbConfig.PORT}/${dbConfig.DB}`, {
+  .connect(`mongodb://${dbConfig.USER}:${dbConfig.PWD}@${dbConfig.HOST}:${dbConfig.PORT}/${dbConfig.DB}`, {
     useNewUrlParser: true,
     useUnifiedTopology: true
   })
